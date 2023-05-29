@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void doubleArray(int array[], int size) {
+    int i;
+    for (i = 0; i < size; i++) {
+        array[i] *= 2;
+    }
+}
+
+void printArray(int array[], int size) {
+    int i;
+    for (i = 0; i < size; i++) {
+        printf("%d ", array[i]);
+    }
+    printf("\n");
+}
+
+int main() {
+    int array[] = {2, 4, 6, 8, 10};
+    int size = sizeof(array) / sizeof(array[0]);
+    printf("Original array: ");
+    printArray(array, size);
+    doubleArray(array, size);
+    printf("Array after doubling: ");
+    printArray(array, size);
+    return 0;
+}
+
